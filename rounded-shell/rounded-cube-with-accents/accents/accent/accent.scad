@@ -26,26 +26,23 @@ module front_accent(length, radius, offset=0) {
 }
 
 module left_curved_accent(edge_radius, radius, offset=0) {
-    translate([-offset, -offset, 0]) {
-        translate([edge_radius, edge_radius, 0]) {
-            rotate_extrude(angle=90) {
-                translate([-edge_radius, 0, 0]) {
-                    circle(r=radius);
-                }
+    translate([edge_radius, edge_radius, 0]) {
+        rotate_extrude(angle=90) {
+            translate([-edge_radius-offset, 0, 0]) {
+                circle(r=radius);
             }
         }
     }
 }
 
 module right_curved_accent(length, edge_radius, radius, offset=0) {
-    translate([offset, -offset, 0]) {
-        translate([length, 0, 0]) {
-            rotate(a=90, v=[0, 0, 1]) {
-                left_curved_accent(
-                    edge_radius=edge_radius,
-                    radius=radius
-                );
-            }
+    translate([length, 0, 0]) {
+        rotate(a=90, v=[0, 0, 1]) {
+            left_curved_accent(
+                edge_radius=edge_radius,
+                radius=radius,
+                offset=offset
+            );
         }
     }
 }
