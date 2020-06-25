@@ -3,10 +3,10 @@ use <rounded-shell.scad>
 $fa = 1;
 $fs = 0.4;
 
-length=50;
+length=30;
 width=20;
-height=20;
-edge_radius=5;
+height=10;
+edge_radius=10;
 wall_thickness=3;
 floor_thickness=2;
 
