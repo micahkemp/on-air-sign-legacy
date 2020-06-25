@@ -10,7 +10,8 @@ module remove_rounded_cube(length, width, height, edge_radius, accent_radius, ac
             edge_radius=edge_radius-wall_thickness,
             accent_radius=accent_radius+wall_thickness,
             accent_count=accent_count,
-            accent_margin=accent_margin
+            accent_margin=accent_margin,
+            accent_offset=wall_thickness
         );
     }
 }
