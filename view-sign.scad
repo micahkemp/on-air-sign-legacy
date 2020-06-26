@@ -24,6 +24,7 @@ window_height=34;
 window_thickness=6;
 window_tongue_thickness=2;
 window_tongue_tolerance=0.4;
+power_socket_hole_diameter=8.3;
 
 sign(
     length=length,
@@ -40,7 +41,8 @@ sign(
     window_height=window_height,
     window_thickness=window_thickness,
     window_tongue_thickness=window_tongue_thickness,
-    window_tongue_tolerance=window_tongue_tolerance
+    window_tongue_tolerance=window_tongue_tolerance,
+    power_socket_hole_diameter=power_socket_hole_diameter
 );
 
 rotate(a=90, v=[1, 0, 0]) {
