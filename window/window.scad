@@ -49,9 +49,16 @@ module window(length, height, thickness, tongue_thickness) {
 // call window() adjusted for tolerance
 module window_opening(length, height, thickness, tongue_thickness, tongue_tolerance) {
     window(
-        length=length,
-        height=height,
+        length=length+tongue_tolerance,
+        height=height+tongue_tolerance,
         thickness=thickness,
         tongue_thickness=tongue_thickness+tongue_tolerance
     );
+}
+
+// this is before window_opening is removed, so no tolerance
+module window_frame(length, height, thickness) {
+    translate([-length/2-thickness, 0, -height-thickness]) {
+        cube([length+thickness*2, thickness, height+thickness]);
+    }
 }

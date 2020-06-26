@@ -7,6 +7,7 @@ edge_radius=10;
 radius=2;
 count=3;
 margin=3;
+center_length=10;
 offset=2;
 
 accents(
@@ -17,5 +18,6 @@ accents(
     radius=radius,
     count=count,
     margin=margin,
+    center_length=center_length,
     offset=offset
 );

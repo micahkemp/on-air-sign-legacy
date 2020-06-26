@@ -1,7 +1,7 @@
 use <rounded-cube-with-accents/rounded-cube-with-accents.scad>
 use <rounded-cube-with-accents/rounded-cube/rounded-cube.scad>
 
-module remove_rounded_cube(length, width, height, edge_radius, accent_radius, accent_count, accent_margin, wall_thickness, floor_thickness) {
+module remove_rounded_cube(length, width, height, edge_radius, accent_radius, accent_count, accent_margin, accent_center_length, wall_thickness, floor_thickness) {
     translate([wall_thickness, wall_thickness, 0]) {
         rounded_cube_with_accents(
             length=length-wall_thickness*2,
@@ -11,12 +11,13 @@ module remove_rounded_cube(length, width, height, edge_radius, accent_radius, ac
             accent_radius=accent_radius+wall_thickness,
             accent_count=accent_count,
             accent_margin=accent_margin,
+            accent_center_length=accent_center_length,
             accent_offset=wall_thickness
         );
     }
 }
 
-module rounded_shell(length, width, height, edge_radius, accent_radius, accent_count, accent_margin, wall_thickness, floor_thickness) {
+module rounded_shell(length, width, height, edge_radius, accent_radius, accent_count, accent_margin, accent_center_length, wall_thickness, floor_thickness) {
     difference() {
         rounded_cube_with_accents(
             length=length,
@@ -25,6 +26,7 @@ module rounded_shell(length, width, height, edge_radius, accent_radius, accent_c
             accent_radius=accent_radius,
             accent_count=accent_count,
             accent_margin=accent_margin,
+            accent_center_length=accent_center_length,
             edge_radius=edge_radius
         );
 
@@ -36,6 +38,7 @@ module rounded_shell(length, width, height, edge_radius, accent_radius, accent_c
             accent_radius=accent_radius,
             accent_count=accent_count,
             accent_margin=accent_margin,
+            accent_center_length=accent_center_length-(wall_thickness*2),
             wall_thickness=wall_thickness,
             floor_thickness=floor_thickness
         );

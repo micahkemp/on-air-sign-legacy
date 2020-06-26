@@ -1,6 +1,6 @@
 use <accent/accent.scad>
 
-module accents(length, width, height, edge_radius, radius, count, margin, offset=0) {
+module accents(length, width, height, edge_radius, radius, count, margin, center_length, offset=0) {
     // 2 accents are required so that margin makes sense from top and bottom
     assert(count>=2, "Must have at least two accents!");
 
@@ -18,6 +18,7 @@ module accents(length, width, height, edge_radius, radius, count, margin, offset
                 width=width,
                 edge_radius=edge_radius,
                 radius=radius,
+                center_length=center_length,
                 offset=offset
             );
         }

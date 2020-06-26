@@ -11,6 +11,7 @@ wall_thickness=2;
 floor_thickness=2;
 accent_radius=2;
 accent_count=2;
+accent_center_length=10;
 accent_margin=13;
 
 rounded_shell(
@@ -20,6 +21,7 @@ rounded_shell(
     edge_radius=edge_radius,
     accent_radius=accent_radius,
     accent_count=accent_count,
+    accent_center_length=accent_center_length,
     accent_margin=accent_margin,
     wall_thickness=wall_thickness,
     floor_thickness=floor_thickness

@@ -8,11 +8,13 @@ width=20;
 edge_radius=10;
 radius=2;
 offset=2;
+center_length=10;
 
 accent(
     length=length,
     width=width,
     edge_radius=edge_radius,
     radius=radius,
-    offset=2
+    offset=2,
+    center_length=center_length
 );

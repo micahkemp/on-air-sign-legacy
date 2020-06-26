@@ -7,6 +7,7 @@ edge_radius=10;
 accent_radius=2;
 accent_count=3;
 accent_margin=5;
+accent_center_length=10;
 accent_offset=1;
 
 rounded_cube_with_accents(
@@ -17,5 +18,6 @@ rounded_cube_with_accents(
     accent_radius=accent_radius,
     accent_count=accent_count,
     accent_margin=accent_margin,
+    accent_center_length=accent_center_length,
     accent_offset=accent_offset
 );
