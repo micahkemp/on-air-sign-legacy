@@ -4,7 +4,7 @@ use <window/window.scad>
 $fa = 1;
 $fs = 0.4;
 
-length=60;
+length=80;
 width=20;
 height=40;
 edge_radius=10;
@@ -18,12 +18,12 @@ accent_margin=13;
 // +  8 window frame thickness * 2
 // = 28
 accent_center_length=28;
-window_length=20;
+window_length=40;
 // window height = height - window_thickness - floor_thickness
 window_height=34;
-window_thickness=4;
-window_tongue_thickness=1;
-window_tongue_tolerance=0.5;
+window_thickness=6;
+window_tongue_thickness=2;
+window_tongue_tolerance=0.4;
 
 sign(
     length=length,
