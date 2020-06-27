@@ -10,9 +10,7 @@ difference() {
     window_frame(
         length=length,
         height=height,
-        thickness=thickness,
-        tongue_thickness=tongue_thickness,
-        tongue_tolerance=tongue_tolerance
+        thickness=thickness
     );
 
     window(
