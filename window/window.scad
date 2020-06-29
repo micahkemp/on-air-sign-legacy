@@ -1,3 +1,5 @@
+use <text-area/text-area.scad>
+
 module front_left_tongue_cube(height, thickness, tongue_thickness) {
     translate([-tongue_thickness, 0, -tongue_thickness]) {
         cube([tongue_thickness, thickness/2, height+tongue_thickness]);
@@ -158,6 +160,27 @@ module window(length, height, thickness, tongue_thickness) {
             thickness=thickness,
             tongue_thickness=tongue_thickness
         );
+    }
+}
+
+module window_with_text(length, height, thickness, tongue_thickness, line1, line2, text_size, text_height, text_area_height) {
+    difference() {
+        window(
+            length=length,
+            height=height,
+            thickness=thickness,
+            tongue_thickness=tongue_thickness
+        );
+
+        translate([0, 0, -height/2]) {
+            text_area(
+                line1=line1,
+                line2=line2,
+                size=text_size,
+                height=text_height,
+                text_area_height=text_area_height
+            );
+        }
     }
 }
 
